@@ -1,0 +1,7 @@
+
+<button [routerLink]="['/index/detalhes']" class="btn btn-primary">Cadastrar</button>
+<div class="row">
+    <div class="col-md-" *ngFor="let u of users">
+           <app-user-item [user]="u"></app-user-item>
+    </div>
+</div>

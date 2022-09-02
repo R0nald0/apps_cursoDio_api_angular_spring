@@ -1,0 +1,16 @@
+
+<div class="card shadow-sm my-5">
+      <div class="card-header d-flex justify-content-between"  >
+         <h3>{{user.nome}}</h3>
+         <div class="btn-group">
+            <button type="button" (click)="openDialog()"class="btn btn-sn btn-danger" >Deletar</button>
+            <button [routerLink]="['/index/detalhes',user.id]"  type="button" class="btn btn-sn btn-primary" >Editar</button>
+        </div>
+      </div>
+      <div class="card-body " >
+           <p class="card-text">{{user.endereco.uf}}</p>
+           <p class="card-text">{{user.endereco.localidade}}</p>
+           <p class="card-text">{{user.endereco.bairro}}</p>
+           <p class="card-text">{{user.endereco.cep}}</p>      
+      </div>
+</div>

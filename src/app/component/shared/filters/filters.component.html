@@ -1,0 +1,23 @@
+<div class="card  ">
+    <div class="card-header d-flex justify-content-center" >
+        
+        <form>
+            <div class="form-grupo d-flex">
+                 <div >
+                       <div class="input-group">
+                         <span class="input-group-text">Buscar Por Nome</span>
+                         <input type="text" aria-label="First name" placeholder="Nome" [(ngModel)]="filtroText" name="filtro" class="form-control">
+                         <input type="text" aria-label="Last name" placeholder="Sobrenome" [(ngModel)]="filtroText" name="filtro" class="form-control">
+                            
+                       </div>
+                 </div>              
+            </div>          
+         </form>
+    </div>
+
+</div>
+
+<div *ngIf="filtro !=[]">
+   
+  <app-list-user [users]="filtro"></app-list-user>
+</div>

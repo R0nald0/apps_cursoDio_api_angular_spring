@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center "   >
+      <form  #userform="ngForm" class="was-validated">
+         <div class="form-group row  p-5 ">
+
+            <div class="form-group col-md-4 ">
+               <label for="endereco">Endereço</label>
+               <input [(ngModel)]="user.endereco.cep" required="endereco" 
+                             name="endereco" #userenderecocep="ngModel" 
+                             class="form-control"  [ngClass]="{'is-invalid':userenderecocep.invalid}"
+                             placeholder="Insira um cep" 
+                           >
+                           <!-- ({userenderecocep.value}) -->
+                    <div class="invalid-feedback">
+                         Preencha o campo
+                    </div>
+            </div>  
+                  
+            <div class="form-group col-md-8">
+                <label for="nome">Nome</label>
+                <input [(ngModel)]="user.nome"  class="form-control" 
+                       #userNome="ngModel" required="name" name="name"  ngClass="{'is-invalid':userNome.invalid}"
+                       placeholder="Insira o nome" bg-gradient-primary 
+                   >
+                    <div class="invalid-feedback">
+                       Preencha o campo
+                    </div>
+             </div>
+                 
+         </div>
+        
+         <div class="mb-5 d-flex justify-content-center">
+            <button   class="btn btn-primary mx-5"  (click)="save()">Salvar</button>
+            <button type="button" class="btn btn-danger " routerLink="['/index']">Cancelar</button>     
+         </div>
+      </form>
+</div>
