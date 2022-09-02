@@ -1,1 +1,1 @@
-Cadastro de pessoas com Endereco comleto.
+Cadastro de pessoas com Endereco completo.
